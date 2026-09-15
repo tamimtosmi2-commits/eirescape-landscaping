@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉireScape | Ireland's Premier Landscaping & Garden Design</title>
+    <meta name="description" content="Award-winning Irish garden design, anti-slip porcelain patios, weatherproof lawns, and luxury pergolas across Dublin, Cork, Galway, and nationwide.">
+    <meta name="keywords" content="landscaping company website, garden design landing page, before after gallery website, landscaping business Ireland, Dublin landscaping">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container top-bar-content">
+            <span class="top-badge">☘️ Booking Spring/Summer 2026 Transformations</span>
+            <span class="top-info">Serving Dublin, Cork, Kildare, Wicklow & Nationwide</span>
+            <a href="tel:+35318942310" class="top-phone">📞 Call: +353 (01) 894 2310</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo" id="brandLogo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2C8 6 6 16 16 30C26 16 24 6 16 2Z" fill="#10B981" fill-opacity="0.3"/>
+                        <path d="M16 6C11 9 10 16 16 26C22 16 21 9 16 6Z" fill="#047857"/>
+                        <path d="M16 6V26" stroke="#A7F3D0" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Éire<span class="accent">Scape</span></span>
+                    <span class="brand-tagline">Landscapes & Living Ireland</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav" id="desktopNav">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Before & After</a>
+                <a href="#process" class="nav-link">Our Process</a>
+                <a href="#climate" class="nav-link">Irish Climate Tech</a>
+                <a href="#estimator" class="nav-link">Instant Estimator</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#estimator" class="btn btn-outline header-phone-btn">
+                    <span>📞 01 894 2310</span>
+                </a>
+                <a href="#contact" class="btn btn-primary header-cta-btn" id="navQuoteBtn">
+                    <span>Free Consultation</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav-links">
+                <a href="#services" class="mobile-link">Services</a>
+                <a href="#gallery" class="mobile-link">Before & After Showcase</a>
+                <a href="#process" class="mobile-link">How We Work</a>
+                <a href="#climate" class="mobile-link">Irish Climate Tech</a>
+                <a href="#estimator" class="mobile-link">Cost Estimator</a>
+                <a href="#testimonials" class="mobile-link">Customer Reviews</a>
+                <a href="#contact" class="mobile-link highlight">Request Free Quote</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <p>Irish Member Association (ALCI)</p>
+                <a href="tel:+35318942310" class="btn btn-primary btn-block">Call (01) 894 2310</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background-wrapper">
+            <img src="assets/hero_garden.jpg" alt="Luxury Landscaped Irish Garden with Pergola and Patio" class="hero-bg-image" id="heroBg">
+            <div class="hero-gradient-overlay"></div>
+        </div>
+
+        <div class="container hero-content-container">
+            <div class="hero-card">
+                <div class="hero-pill-badge">
+                    <span class="badge-icon">☘️</span>
+                    <span>ALCI Accredited • 100% Weatherproof Irish Engineering</span>
+                </div>
+                <h1 class="hero-headline">
+                    Transforming Irish Gardens Into <span class="gradient-text">Outdoor Living Sanctuaries</span>
+                </h1>
+                <p class="hero-subheadline">
+                    From soggy, waterlogged lawns to luxury porcelain patios, 3D architectural garden blueprints, and custom cedar pergolas. Master craftsmanship built for Ireland's rainfall and lifestyle.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#estimator" class="btn btn-primary btn-lg" id="heroPrimaryCta">
+                        <span>Get Instant Ballpark Estimate</span>
+                        <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="#gallery" class="btn btn-glass btn-lg" id="heroSecondaryCta">
+                        <span>See Before & After</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">450+</span>
+                        <span class="stat-label">Irish Gardens Built</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">5.0 ★</span>
+                        <span class="stat-label">120+ Verified Reviews</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">5 Years</span>
+                        <span class="stat-label">Structural Guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Accreditation Badges Bar -->
+    <section class="trust-bar">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <span class="trust-icon">🛡️</span>
+                <div class="trust-meta">
+                    <strong>ALCI Registered</strong>
+                    <span>Association of Landscape Contractors Ireland</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🌱</span>
+                <div class="trust-meta">
+                    <strong>Bord Bia Standards</strong>
+                    <span>Bloom Gold Medal Quality Planting</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🌧️</span>
+                <div class="trust-meta">
+                    <strong>SuDS Certified Drainage</strong>
+                    <span>Zero Puddling & Heavy Clay Solutions</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💶</span>
+                <div class="trust-meta">
+                    <strong>€6.5M Liability Insured</strong>
+                    <span>Total Peace of Mind On Every Project</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Before & After Showcase Section -->
+    <section class="section showcase-section" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Real Irish Transformations</div>
+                <h2 class="section-title">Drag To See The Transformation</h2>
+                <p class="section-subtitle">
+                    Interact with our live split slider to see how we transformed an unkempt, waterlogged Dublin backyard into an all-weather luxury patio and lawn.
+                </p>
+            </div>
+
+            <!-- Comparison Widget Container -->
+            <div class="comparison-card">
+                <div class="comparison-wrapper" id="comparisonSlider">
+                    <!-- Before Image (Base / Top Layer) -->
+                    <div class="img-layer before-layer" id="beforeLayer">
+                        <img src="assets/before_garden.jpg" alt="Overgrown messy suburban backyard before landscaping" class="comparison-img">
+                        <span class="image-tag tag-before">BEFORE: Muddy, Uneven &amp; Cracked Concrete</span>
+                    </div>
+
+                    <!-- After Image (Bottom / Revealed Layer) -->
+                    <div class="img-layer after-layer">
+                        <img src="assets/after_garden.jpg" alt="Modern landscaped patio and green turf lawn after renovation" class="comparison-img">
+                        <span class="image-tag tag-after">AFTER: Porcelain Paving, Turf &amp; Cedar Fencing</span>
+                    </div>
+
+                    <!-- Draggable Divider Line & Handle -->
+                    <div class="slider-handle" id="sliderHandle">
+                        <div class="handle-line"></div>
+                        <div class="handle-button" aria-label="Drag slider to compare before and after">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformation Details Card -->
+                <div class="project-details-grid">
+                    <div class="detail-box">
+                        <span class="detail-title">📍 Location</span>
+                        <span class="detail-value">Blackrock, South Co. Dublin</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-title">⏱️ Build Duration</span>
+                        <span class="detail-value">14 Working Days</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-title">🧱 Materials Specified</span>
+                        <span class="detail-value">Italian R11 Anti-Slip Porcelain, Western Red Cedar &amp; Roll-Out Turf</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-title">💧 Drainage Engineering</span>
+                        <span class="detail-value">French Perimeter Drain + Soakaway Soak-pit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transformation Gallery Cards -->
+            <div class="gallery-subgrid">
+                <div class="subgallery-card">
+                    <div class="subgallery-content">
+                        <span class="project-tag">Dublin 4 Urban Courtyard</span>
+                        <h3>Sandstone &amp; Evergreen Privacy Hedge</h3>
+                        <p>Turned a cramped 35m² gravel yard into a seamless indoor-outdoor living room with custom lighting.</p>
+                        <span class="badge-mini">Completed: March 2026</span>
+                    </div>
+                </div>
+                <div class="subgallery-card">
+                    <div class="subgallery-content">
+                        <span class="project-tag">Cork Coastal Estate</span>
+                        <h3>Windbreak Planting &amp; Granite Terracing</h3>
+                        <p>Multi-tiered sloped garden stabilized with local Irish limestone retaining walls and salt-tolerant perennials.</p>
+                        <span class="badge-mini">Completed: February 2026</span>
+                    </div>
+                </div>
+                <div class="subgallery-card">
+                    <div class="subgallery-content">
+                        <span class="project-tag">Malahide Family Haven</span>
+                        <h3>Child-Friendly All-Weather Artificial Turf</h3>
+                        <p>High-drainage sports-grade turf and recessed trampoline pit framed by raised fragrant flower beds.</p>
+                        <span class="badge-mini">Completed: January 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Our Comprehensive Expertise</div>
+                <h2 class="section-title">Engineered For The Irish Landscape</h2>
+                <p class="section-subtitle">
+                    Every garden we build combines architectural aesthetics with structural longevity designed to withstand 250+ days of Irish rain.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span>🏛️</span>
+                    </div>
+                    <h3 class="service-name">Porcelain &amp; Granite Hardscaping</h3>
+                    <p class="service-desc">
+                        Anti-slip (R11 rated) vitrified outdoor porcelain and natural Irish granite. Non-porous, moss-resistant, and frost-proof under freezing winter temperatures.
+                    </p>
+                    <ul class="service-features">
+                        <li>Laser-leveled reinforced concrete base</li>
+                        <li>High-durability resin pointing mortar</li>
+                        <li>Flush threshold indoor-outdoor transitions</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span>📐</span>
+                    </div>
+                    <h3 class="service-name">3D Architectural Garden Design</h3>
+                    <p class="service-desc">
+                        Experience your finished garden in 4K photo-realism before groundwork starts. We map sunlight trajectories, drainage gradients, and spatial zoning.
+                    </p>
+                    <ul class="service-features">
+                        <li>Accurate scale blueprints &amp; CAD drawings</li>
+                        <li>Planting schedules &amp; botanical selection</li>
+                        <li>Fixed-price itemized build specification</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span>🌧️</span>
+                    </div>
+                    <h3 class="service-name">Lawn Drainage &amp; Turf Installation</h3>
+                    <p class="service-desc">
+                        Say goodbye to squelchy, muddy lawns. We install subterranean perforated French drains, gravel soakaways, and grade-A weed-free roll-out turf.
+                    </p>
+                    <ul class="service-features">
+                        <li>Sub-soil aeration &amp; silica sand dressing</li>
+                        <li>Heavy clay soil conditioning</li>
+                        <li>Options for all-weather luxury pet turf</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span>🪵</span>
+                    </div>
+                    <h3 class="service-name">Pergolas, Decking &amp; Screening</h3>
+                    <p class="service-desc">
+                        Custom cedar and composite structures offering sheltered outdoor living, acoustic privacy from neighbors, and integrated warm lighting.
+                    </p>
+                    <ul class="service-features">
+                        <li>Louvered bioclimatic motorized roofs</li>
+                        <li>Horizontal slatted privacy screening</li>
+                        <li>Rot-resistant composite millboard decking</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span>🌺</span>
+                    </div>
+                    <h3 class="service-name">Native &amp; Pollinator-Friendly Planting</h3>
+                    <p class="service-desc">
+                        Four-season sensory gardens planted with climate-hardy shrubs, ornamental grasses, and pollinator perennials recommended by the All-Ireland Pollinator Plan.
+                    </p>
+                    <ul class="service-features">
+                        <li>Low-maintenance evergreen structure</li>
+                        <li>Soil pH matched botanical varieties</li>
+                        <li>Bark-mulched weed suppression borders</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card featured-service">
+                    <div class="service-icon-box">
+                        <span>✨</span>
+                    </div>
+                    <h3 class="service-name">Turnkey Complete Garden Makeover</h3>
+                    <p class="service-desc">
+                        Our all-inclusive design-to-completion service. Complete site excavation, stonework, planting, ambient 12V LED lighting, and waste clearance.
+                    </p>
+                    <ul class="service-features">
+                        <li>Single dedicated project manager</li>
+                        <li>Licensed commercial green waste removal</li>
+                        <li>5-year warranty on all structural elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Irish Climate Technology Section -->
+    <section class="section climate-section" id="climate">
+        <div class="container">
+            <div class="climate-grid">
+                <div class="climate-content">
+                    <div class="section-badge">The Irish Climate Difference</div>
+                    <h2 class="section-title">Why Standard Landscaping Fails in Ireland</h2>
+                    <p class="climate-lead">
+                        Ireland receives an average of 1,200mm of rainfall annually, with clay-heavy soils that quickly become compacted, saturated, and waterlogged.
+                    </p>
+                    <div class="climate-points">
+                        <div class="climate-point">
+                            <span class="point-num">01</span>
+                            <div>
+                                <h4>Permeable Sub-Base Engineering</h4>
+                                <p>We dig deeper (minimum 150mm MOT Type 1 aggregate) to ensure water drains freely under paving, preventing frost heave and winter slab cracks.</p>
+                            </div>
+                        </div>
+                        <div class="climate-point">
+                            <span class="point-num">02</span>
+                            <div>
+                                <h4>Certified Non-Slip Porcelain</h4>
+                                <p>Standard polished sandstone grows green algae and becomes dangerously slippery when damp. Our vitrified porcelain has a certified anti-slip rating of R11.</p>
+                            </div>
+                        </div>
+                        <div class="climate-point">
+                            <span class="point-num">03</span>
+                            <div>
+                                <h4>Protected Microclimate Sanctuaries</h4>
+                                <p>We strategically position cedar lath windbreaks and louvered pergolas so you can enjoy your garden even during typical Irish drizzle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="climate-visual-card">
+                    <div class="climate-stat-box">
+                        <div class="stat-circle">
+                            <span>SuDS</span>
+                        </div>
+                        <h3>Sustainable Drainage Standards</h3>
+                        <p>Every patio slope and soakaway we engineer is designed to adhere to Irish environmental drainage regulations.</p>
+                        <div class="drainage-features-list">
+                            <span>✓ Perforated French Drains</span>
+                            <span>✓ Geotextile Weed Barrier Membrane</span>
+                            <span>✓ Anti-Efflorescence Primers</span>
+                            <span>✓ Sump Pit Water Diversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Step Process Section -->
+    <section class="section process-section" id="process">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">How We Deliver Excellence</div>
+                <h2 class="section-title">Our 4-Step Design-to-Build Journey</h2>
+                <p class="section-subtitle">
+                    A seamless, transparent process from your first consultation to the final garden walkthrough.
+                </p>
+            </div>
+
+            <div class="process-steps-row">
+                <div class="process-step">
+                    <div class="step-badge">1</div>
+                    <div class="step-card">
+                        <span class="step-icon">📋</span>
+                        <h3>On-Site Consultation</h3>
+                        <p>We visit your property to evaluate soil quality, sunlight orientation, drainage channels, and listen to your lifestyle wishes.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-badge">2</div>
+                    <div class="step-card">
+                        <span class="step-icon">💻</span>
+                        <h3>3D Design &amp; Quote</h3>
+                        <p>Our landscape architects construct a photorealistic 3D model of your future garden, accompanied by a fixed-price itemized contract.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-badge">3</div>
+                    <div class="step-card">
+                        <span class="step-icon">🏗️</span>
+                        <h3>Master Construction</h3>
+                        <p>Our in-house ALCI registered landscaping team arrives on schedule. Clean, courteous, and efficient groundwork and construction.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-badge">4</div>
+                    <div class="step-card">
+                        <span class="step-icon">🤝</span>
+                        <h3>Handover &amp; 5-Yr Guarantee</h3>
+                        <p>We conduct a final review, provide a comprehensive plant care manual, and activate your 5-year structural warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Instant Project Estimator -->
+    <section class="section estimator-section" id="estimator">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Instant Planning Tool</div>
+                <h2 class="section-title">Estimate Your Garden Transformation Cost</h2>
+                <p class="section-subtitle">
+                    Select your garden size and service preferences below for an instant ballpark cost estimate tailored to Irish market rates.
+                </p>
+            </div>
+
+            <div class="estimator-container">
+                <div class="estimator-controls">
+                    <!-- Garden Area Slider -->
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label for="gardenArea">Garden Footprint Size (approx):</label>
+                            <span class="slider-val-display" id="areaDisplay">75 m²</span>
+                        </div>
+                        <input type="range" id="gardenArea" min="30" max="300" step="5" value="75" class="range-slider">
+                        <div class="range-ticks">
+                            <span>30 m² (Courtyard)</span>
+                            <span>150 m² (Standard)</span>
+                            <span>300+ m² (Estate)</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Package Radios -->
+                    <div class="control-group">
+                        <label class="control-label">Desired Scope of Work:</label>
+                        <div class="package-options">
+                            <label class="package-radio-label active">
+                                <input type="radio" name="serviceScope" value="paving" checked>
+                                <span class="radio-card">
+                                    <strong>Porcelain Patio &amp; Drainage</strong>
+                                    <small>Excavation, base &amp; R11 slabs</small>
+                                </span>
+                            </label>
+                            <label class="package-radio-label">
+                                <input type="radio" name="serviceScope" value="turf">
+                                <span class="radio-card">
+                                    <strong>Lawn Drainage &amp; Turf</strong>
+                                    <small>Sub-soil soakaways &amp; fresh turf</small>
+                                </span>
+                            </label>
+                            <label class="package-radio-label">
+                                <input type="radio" name="serviceScope" value="full">
+                                <span class="radio-card">
+                                    <strong>Complete Garden Makeover</strong>
+                                    <small>Paving, lawn, raised beds &amp; planting</small>
+                                </span>
+                            </label>
+                            <label class="package-radio-label">
+                                <input type="radio" name="serviceScope" value="luxury">
+                                <span class="radio-card">
+                                    <strong>Luxury Outdoor Living Suite</strong>
+                                    <small>Includes Pergola, 3D design &amp; lighting</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- County Dropdown -->
+                    <div class="control-group">
+                        <label for="countySelect" class="control-label">Your Location / County:</label>
+                        <select id="countySelect" class="form-select">
+                            <option value="dublin">Dublin (North &amp; South)</option>
+                            <option value="kildare">Kildare</option>
+                            <option value="wicklow">Wicklow</option>
+                            <option value="cork">Cork</option>
+                            <option value="galway">Galway</option>
+                            <option value="meath">Meath</option>
+                            <option value="limerick">Limerick</option>
+                            <option value="other">Other County (Nationwide)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Estimator Output Card -->
+                <div class="estimator-result-card">
+                    <div class="result-header">
+                        <span class="estimate-tag">Ballpark Estimate</span>
+                        <h3>Estimated Investment</h3>
+                    </div>
+                    <div class="price-display-wrapper">
+                        <span class="currency-symbol">€</span>
+                        <span class="price-amount" id="priceOutput">8,200</span>
+                        <span class="vat-note">incl. VAT &amp; Waste Removal</span>
+                    </div>
+                    <div class="estimate-breakdown">
+                        <div class="breakdown-row">
+                            <span>Estimated Duration:</span>
+                            <strong id="durationOutput">7 - 10 Working Days</strong>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Warranty Included:</span>
+                            <strong>5 Years Structural</strong>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Soil &amp; Site Assessment:</span>
+                            <strong class="free-text">FREE with Quote</strong>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-block" id="lockInQuoteBtn">
+                        <span>Lock In This Estimate &amp; Book Visit</span>
+                    </a>
+                    <p class="disclaimer-text">
+                        *Estimates reflect standard ground preparation, materials, and labor. Precise price confirmed during on-site survey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials & Social Proof -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Client Stories</div>
+                <h2 class="section-title">Trusted By Irish Homeowners</h2>
+                <p class="section-subtitle">
+                    Read why families across Dublin, Cork, and Wicklow recommend ÉireScape.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Our back garden in Blackrock was a mud bath for 8 months of the year because of heavy clay. ÉireScape installed French drains and porcelain paving. Now my kids can play outside 365 days a year without dragging mud into the house. Absolute top-class team."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div class="author-meta">
+                            <strong>Ciaran Murphy</strong>
+                            <span>Blackrock, Co. Dublin • Full Makeover</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "The 3D design service made all the difference. Being able to see how the cedar pergola and lighting would look before agreeing to the build gave us complete confidence. The project was finished exactly on time and within our agreed budget."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SF</div>
+                        <div class="author-meta">
+                            <strong>Sinéad &amp; Liam Fitzgerald</strong>
+                            <span>Malahide, Co. Dublin • Pergola &amp; Paving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-row">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Transformed our suburban Cork garden into something that looks like an award-winning Bloom garden. The porcelain slabs are completely slip-free even when it pours rain. Highly recommend to anyone looking for genuine quality."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DO</div>
+                        <div class="author-meta">
+                            <strong>Dr. Declan O'Connor</strong>
+                            <span>Douglas, Cork • Garden Renovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Common Questions</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-accordion-wrapper">
+                <details class="faq-item" open>
+                    <summary class="faq-question">Do I need planning permission for a patio or pergola in Ireland?</summary>
+                    <div class="faq-answer">
+                        <p>Under Irish planning regulations, ground-level patios and open-sided garden pergolas under 4 meters in height generally do not require planning permission, provided they fall within standard residential exemptions. Our team handles compliance checks during the design phase.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How does your 5-year structural guarantee work?</summary>
+                    <div class="faq-answer">
+                        <p>Our guarantee covers all hard landscaping foundations, structural retaining walls, porcelain pointing, and drainage systems against subsidence, cracking, or installation failure. We build to strict ALCI standards to ensure long-term durability.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">When is the best time of year to landscape an Irish garden?</summary>
+                    <div class="faq-answer">
+                        <p>Hard landscaping (paving, pergolas, retaining walls) can be constructed year-round in Ireland. Spring and early autumn are prime for turf laying and perennial planting so roots establish ahead of summer growth.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How long does a typical garden transformation take?</summary>
+                    <div class="faq-answer">
+                        <p>A standard suburban patio and lawn project takes between 7 to 10 working days. Full luxury renovations with pergolas and custom masonry generally take 2 to 3 weeks. We provide a firm schedule before breaking ground.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Booking Form -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-box-grid">
+                <div class="contact-info-panel">
+                    <div class="section-badge">Start Your Project</div>
+                    <h2 class="contact-title">Book Your Free 3D On-Site Consultation</h2>
+                    <p class="contact-text">
+                        Tell us about your garden goals. Our lead landscape designer will inspect your space, conduct a soil and light assessment, and provide a complimentary 3D visual concept.
+                    </p>
+
+                    <div class="direct-contact-list">
+                        <div class="direct-item">
+                            <span class="direct-icon">📍</span>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <p>Sandyford Business Park, Dublin 18, Ireland</p>
+                            </div>
+                        </div>
+                        <div class="direct-item">
+                            <span class="direct-icon">📞</span>
+                            <div>
+                                <strong>Direct Line</strong>
+                                <p><a href="tel:+35318942310">+353 (01) 894 2310</a> (Mon - Sat, 8:00 - 18:00)</p>
+                            </div>
+                        </div>
+                        <div class="direct-item">
+                            <span class="direct-icon">✉️</span>
+                            <div>
+                                <strong>Consultation Desk</strong>
+                                <p><a href="mailto:info@eirescapelandscapes.ie">info@eirescapelandscapes.ie</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-badge-box">
+                        <span class="badge-icon">🔒</span>
+                        <div>
+                            <strong>No Pressure, Fixed-Price Quotes</strong>
+                            <p>We honor our quotations. No surprise extras, hidden disposal fees, or fluctuating material rates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="contact-form-panel">
+                    <form id="consultationForm" class="consultation-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="clientName">Full Name *</label>
+                                <input type="text" id="clientName" required placeholder="e.g. Liam Murphy">
+                            </div>
+                            <div class="form-field">
+                                <label for="clientPhone">Irish Phone Number *</label>
+                                <input type="tel" id="clientPhone" required placeholder="e.g. 087 123 4567">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="clientEmail">Email Address *</label>
+                                <input type="email" id="clientEmail" required placeholder="liam@example.ie">
+                            </div>
+                            <div class="form-field">
+                                <label for="clientCounty">County / Eircode Area *</label>
+                                <select id="clientCounty" required>
+                                    <option value="">Select County</option>
+                                    <option value="Dublin South">Dublin South</option>
+                                    <option value="Dublin North">Dublin North</option>
+                                    <option value="Dublin West">Dublin West</option>
+                                    <option value="Kildare">Kildare</option>
+                                    <option value="Wicklow">Wicklow</option>
+                                    <option value="Cork">Cork</option>
+                                    <option value="Galway">Galway</option>
+                                    <option value="Meath">Meath</option>
+                                    <option value="Other">Other County</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="interestServices">Primary Services of Interest</label>
+                            <select id="interestServices">
+                                <option value="full">Complete Garden Makeover (Turnkey)</option>
+                                <option value="paving">Porcelain &amp; Granite Patio Paving</option>
+                                <option value="lawn">Lawn Replacement &amp; French Drainage</option>
+                                <option value="pergola">Cedar Pergola &amp; Outdoor Living</option>
+                                <option value="design">3D Design &amp; Planting Plan Only</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="clientNotes">Current Garden Condition &amp; Goals</label>
+                            <textarea id="clientNotes" rows="3" placeholder="e.g. Garden is currently uneven and waterlogged clay. Looking for a modern low-maintenance patio and fresh lawn..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitConsultationBtn">
+                            <span>Confirm &amp; Request Free Consultation</span>
+                            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="form-feedback" id="formFeedback"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#hero" class="brand-logo footer-logo">
+                    <div class="logo-mark">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2C8 6 6 16 16 30C26 16 24 6 16 2Z" fill="#10B981" fill-opacity="0.3"/>
+                            <path d="M16 6C11 9 10 16 16 26C22 16 21 9 16 6Z" fill="#047857"/>
+                        </svg>
+                    </div>
+                    <span class="brand-name">Éire<span class="accent">Scape</span></span>
+                </a>
+                <p class="footer-bio">
+                    Ireland's trusted landscape architecture and garden construction firm. Crafting sustainable, drainage-engineered sanctuaries across the Republic of Ireland.
+                </p>
+                <div class="footer-badges">
+                    <span>☘️ ALCI Certified Contractor</span>
+                    <span>🛡️ Fully Insured</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Porcelain Patios</a></li>
+                    <li><a href="#services">3D Landscape Design</a></li>
+                    <li><a href="#services">Lawn French Drainage</a></li>
+                    <li><a href="#services">Cedar Pergolas</a></li>
+                    <li><a href="#services">Native Pollinator Gardens</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Service Regions</h4>
+                <ul class="footer-links">
+                    <li><a href="#contact">Dublin (D4, D6, D14, D18, North)</a></li>
+                    <li><a href="#contact">Co. Wicklow (Bray, Greystones)</a></li>
+                    <li><a href="#contact">Co. Kildare (Naas, Maynooth)</a></li>
+                    <li><a href="#contact">Co. Cork (City &amp; Douglas)</a></li>
+                    <li><a href="#contact">Co. Galway &amp; Nationwide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Direct Contact</h4>
+                <p class="footer-contact-item">📞 <a href="tel:+35318942310">+353 (01) 894 2310</a></p>
+                <p class="footer-contact-item">✉️ <a href="mailto:info@eirescapelandscapes.ie">info@eirescapelandscapes.ie</a></p>
+                <p class="footer-contact-item">🕒 Mon - Sat: 8:00 AM - 6:00 PM</p>
+                <p class="footer-contact-item">📍 Sandyford Business Park, Dublin 18</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <p>© 2026 ÉireScape Landscaping &amp; Garden Design Ireland. All Rights Reserved. Built for BISWAS IT FIRM Internship Task 101.</p>
+                <div class="bottom-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                    <span>•</span>
+                    <a href="#">ALCI Code of Conduct</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer" role="alert" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
