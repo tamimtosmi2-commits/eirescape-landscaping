@@ -34,21 +34,20 @@ function initHeaderScroll() {
    2. Accessible Multi-Tab Navigation System
    ========================================================================== */
 function initTabNavigation() {
-    const tabButtons = document.querySelectorAll('.tab-trigger-btn');
+    const tabButtons = document.querySelectorAll('.menu-nav-btn, .mobile-nav-btn');
     const tabPanels = document.querySelectorAll('.tab-panel-view');
     const tabJumps = document.querySelectorAll('[data-tab-jump]');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileToggle = document.getElementById('mobileMenuToggle');
 
     if (!tabButtons.length || !tabPanels.length) return;
 
     // Switch tab function
     window.switchTab = function(tabKey, scrollToTop = true) {
-        let found = false;
-
         tabButtons.forEach(btn => {
             const isMatch = btn.getAttribute('data-tab') === tabKey;
             btn.classList.toggle('active', isMatch);
             btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
-            if (isMatch) found = true;
         });
 
         tabPanels.forEach(panel => {
@@ -56,12 +55,14 @@ function initTabNavigation() {
             panel.classList.toggle('active', isMatch);
         });
 
-        // Sync quick toggle pills
-        const togglePills = document.querySelectorAll('.toggle-pill');
-        togglePills.forEach(pill => {
-            const isMatch = pill.getAttribute('data-tab-toggle') === tabKey;
-            pill.classList.toggle('active', isMatch);
-        });
+        // Close mobile menu if open
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            if (mobileToggle) {
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
 
         // Update URL hash without jumping page abruptly
         if (history.pushState) {
@@ -71,14 +72,16 @@ function initTabNavigation() {
         }
 
         if (scrollToTop) {
-            const tabNav = document.getElementById('mainTabNav');
-            if (tabNav) {
-                const navPos = tabNav.getBoundingClientRect().top + window.scrollY - 70;
-                window.scrollTo({ top: Math.max(0, navPos), behavior: 'smooth' });
+            const header = document.getElementById('siteHeader');
+            const headerHeight = header ? header.offsetHeight : 72;
+            const mainContent = document.getElementById('mainContent');
+            if (mainContent) {
+                const contentPos = mainContent.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
+                window.scrollTo({ top: Math.max(0, contentPos), behavior: 'smooth' });
             }
         }
 
-        // If switching to gallery or calculator, recalculate dimensions
+        // If switching to gallery, recalibrate comparison slider
         if (tabKey === 'gallery') {
             setTimeout(() => {
                 const slider = document.getElementById('comparisonSlider');
@@ -96,7 +99,7 @@ function initTabNavigation() {
             window.switchTab(tabKey, true);
         });
 
-        // Keyboard Arrow Navigation between tabs (WAI-ARIA pattern)
+        // Keyboard Arrow Navigation
         btn.addEventListener('keydown', (e) => {
             let targetIndex = index;
             if (e.key === 'ArrowRight') {
@@ -117,7 +120,16 @@ function initTabNavigation() {
         });
     });
 
-    // Quick Portal & CTA Tab Jump buttons (Cards, Banners, Showcase buttons)
+    // Mobile Hamburger Toggle
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileToggle.classList.toggle('active', isOpen);
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    // Quick Portal & CTA Tab Jump links
     tabJumps.forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
@@ -127,7 +139,6 @@ function initTabNavigation() {
             }
         });
 
-        // Support Enter and Space on focusable jump cards
         el.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -135,43 +146,6 @@ function initTabNavigation() {
             }
         });
     });
-
-    // Quick Tab Toggle Bar Pills
-    const quickTogglePills = document.querySelectorAll('.toggle-pill');
-    quickTogglePills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            const target = pill.getAttribute('data-tab-toggle');
-            if (target) {
-                window.switchTab(target, true);
-            }
-        });
-    });
-
-    // Previous / Next Tab Navigation Buttons
-    const prevBtn = document.getElementById('prevTabBtn');
-    const nextBtn = document.getElementById('nextTabBtn');
-
-    function getCurrentTabIndex() {
-        const activeTab = document.querySelector('.tab-trigger-btn.active');
-        const currentKey = activeTab ? activeTab.getAttribute('data-tab') : 'overview';
-        return validTabs.indexOf(currentKey);
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            const curIdx = getCurrentTabIndex();
-            const prevIdx = (curIdx - 1 + validTabs.length) % validTabs.length;
-            window.switchTab(validTabs[prevIdx], true);
-        });
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            const curIdx = getCurrentTabIndex();
-            const nextIdx = (curIdx + 1) % validTabs.length;
-            window.switchTab(validTabs[nextIdx], true);
-        });
-    }
 
     // Handle initial hash on page load
     const currentHash = window.location.hash.replace('#', '');
@@ -597,13 +571,13 @@ function initProjectManager() {
         if (filtered.length === 0) {
             managerGrid.innerHTML = `
                 <div class="empty-manager-state">
-                    <div class="empty-icon">🌿</div>
+                    <div class="empty-icon"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#10b981" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
                     <h3>No Projects Found</h3>
                     <p style="color: var(--color-text-muted); margin-bottom: 1.25rem;">
                         ${allProjects.length === 0 ? "You have deleted all projects. Click 'Reset Defaults' to restore samples, or click '+ Add New Project'." : "No projects match your current search or filter."}
                     </p>
                     <button type="button" class="btn btn-primary" id="emptyAddBtn">
-                        <span>➕ Add New Project</span>
+                        <span>+ Add New Project</span>
                     </button>
                 </div>
             `;
@@ -620,21 +594,21 @@ function initProjectManager() {
                 <div class="manager-card-thumb">
                     <img src="${item.img || 'assets/after_garden.jpg'}" alt="${escapeHtml(item.title)}">
                     <span class="manager-thumb-badge">${escapeHtml(item.category)}</span>
-                    <span class="manager-thumb-location">📍 ${escapeHtml(item.location)}</span>
+                    <span class="manager-thumb-location">${escapeHtml(item.location)}</span>
                 </div>
                 <div class="manager-card-body">
                     <h3 class="manager-card-title">${escapeHtml(item.title)}</h3>
                     <p class="manager-card-desc">${escapeHtml(item.desc)}</p>
                     <div class="manager-card-meta">
                         <span class="meta-price">€${Number(item.price).toLocaleString('en-IE')}</span>
-                        <span class="meta-duration">⏱️ ${escapeHtml(item.duration)}</span>
+                        <span class="meta-duration">${escapeHtml(item.duration)}</span>
                     </div>
                     <div class="manager-card-footer">
                         <button type="button" class="btn-card-inquire" data-inquire-id="${item.id}">
-                            💬 Inquire About This
+                            Inquire About This
                         </button>
                         <button type="button" class="btn-card-delete" data-delete-id="${item.id}" aria-label="Delete project ${escapeHtml(item.title)}">
-                            🗑️ Delete
+                            Delete
                         </button>
                     </div>
                 </div>
@@ -738,7 +712,7 @@ function initProjectManager() {
             closeModal(addModal);
             addForm.reset();
 
-            showToast(`✅ "${title}" added to project catalog!`);
+            showToast(`"${title}" added to project catalog.`);
         });
     }
 
@@ -765,7 +739,7 @@ function initProjectManager() {
             closeModal(deleteModal);
             renderProjects();
 
-            showToast(`🗑️ "${title}" was deleted.`);
+            showToast(`"${title}" was deleted.`);
         });
     }
 
@@ -778,7 +752,7 @@ function initProjectManager() {
             if (searchInput) searchInput.value = '';
             filterChips.forEach(c => c.classList.toggle('active', c.getAttribute('data-manager-filter') === 'all'));
             renderProjects();
-            showToast('🔄 Project catalog reset to default samples.');
+            showToast('Project catalog reset to default samples.');
         });
     }
 
@@ -851,7 +825,7 @@ function initConsultationForm() {
 
             if (feedback) {
                 feedback.className = 'form-feedback success';
-                feedback.innerHTML = `☘️ Thank you, <strong>${escapeHtml(name)}</strong>! Your consultation request for <strong>${escapeHtml(county)}</strong> has been received. One of our ALCI master designers will call you at <strong>${escapeHtml(phone)}</strong> within 24 hours to schedule your free on-site survey and 3D concept.`;
+                feedback.innerHTML = `Thank you, <strong>${escapeHtml(name)}</strong>! Your consultation request for <strong>${escapeHtml(county)}</strong> has been received. One of our ALCI master designers will call you at <strong>${escapeHtml(phone)}</strong> within 24 hours to schedule your free on-site survey and 3D concept.`;
             }
 
             showToast('Consultation request sent successfully!');
