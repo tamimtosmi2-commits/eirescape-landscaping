@@ -56,6 +56,13 @@ function initTabNavigation() {
             panel.classList.toggle('active', isMatch);
         });
 
+        // Sync quick toggle pills
+        const togglePills = document.querySelectorAll('.toggle-pill');
+        togglePills.forEach(pill => {
+            const isMatch = pill.getAttribute('data-tab-toggle') === tabKey;
+            pill.classList.toggle('active', isMatch);
+        });
+
         // Update URL hash without jumping page abruptly
         if (history.pushState) {
             history.pushState(null, null, `#${tabKey}`);
@@ -79,6 +86,8 @@ function initTabNavigation() {
             }, 50);
         }
     };
+
+    const validTabs = ['overview', 'services', 'gallery', 'calculator', 'manager', 'reviews', 'contact'];
 
     // Tab Button Clicks
     tabButtons.forEach((btn, index) => {
@@ -108,7 +117,7 @@ function initTabNavigation() {
         });
     });
 
-    // Quick Portal & CTA Tab Jump buttons
+    // Quick Portal & CTA Tab Jump buttons (Cards, Banners, Showcase buttons)
     tabJumps.forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
@@ -127,9 +136,45 @@ function initTabNavigation() {
         });
     });
 
+    // Quick Tab Toggle Bar Pills
+    const quickTogglePills = document.querySelectorAll('.toggle-pill');
+    quickTogglePills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            const target = pill.getAttribute('data-tab-toggle');
+            if (target) {
+                window.switchTab(target, true);
+            }
+        });
+    });
+
+    // Previous / Next Tab Navigation Buttons
+    const prevBtn = document.getElementById('prevTabBtn');
+    const nextBtn = document.getElementById('nextTabBtn');
+
+    function getCurrentTabIndex() {
+        const activeTab = document.querySelector('.tab-trigger-btn.active');
+        const currentKey = activeTab ? activeTab.getAttribute('data-tab') : 'overview';
+        return validTabs.indexOf(currentKey);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            const curIdx = getCurrentTabIndex();
+            const prevIdx = (curIdx - 1 + validTabs.length) % validTabs.length;
+            window.switchTab(validTabs[prevIdx], true);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const curIdx = getCurrentTabIndex();
+            const nextIdx = (curIdx + 1) % validTabs.length;
+            window.switchTab(validTabs[nextIdx], true);
+        });
+    }
+
     // Handle initial hash on page load
     const currentHash = window.location.hash.replace('#', '');
-    const validTabs = ['overview', 'services', 'gallery', 'calculator', 'manager', 'reviews', 'contact'];
     if (validTabs.includes(currentHash)) {
         window.switchTab(currentHash, false);
     }

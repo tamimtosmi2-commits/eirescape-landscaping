@@ -112,22 +112,25 @@
              TAB 1: OVERVIEW & HOME
              =================================================================== -->
         <div class="tab-panel-view active" id="panel-overview" role="tabpanel" aria-labelledby="tabBtn-overview">
-            <!-- Hero Section -->
+            <!-- Hero Section with Relevant Background Picture -->
             <section class="hero-section" id="hero">
-                <div class="hero-bg-overlay"></div>
-                <div class="container hero-container">
-                    <div class="hero-content">
-                        <div class="hero-badge">
+                <div class="hero-background-wrapper">
+                    <img src="assets/hero_garden.jpg" alt="Luxury landscaped garden with porcelain patio and cedar pergola in Ireland" class="hero-bg-image">
+                    <div class="hero-gradient-overlay"></div>
+                </div>
+                <div class="container hero-content-container">
+                    <div class="hero-card">
+                        <div class="hero-pill-badge">
                             <span class="badge-dot"></span>
                             <span>☘️ ALCI Accredited Landscape Contractor</span>
                         </div>
-                        <h1 class="hero-title">
+                        <h1 class="hero-headline">
                             Ireland's Luxury Outdoor Living &amp; <span class="text-gradient">Garden Engineering</span>
                         </h1>
-                        <p class="hero-lead">
+                        <p class="hero-subheadline">
                             We transform saturated, overgrown backyards into weatherproof, architectural sanctuaries. Specialized in R11 anti-slip porcelain patios, SuDS drainage systems, and bespoke Western Red Cedar pergolas.
                         </p>
-                        <div class="hero-actions">
+                        <div class="hero-cta-group">
                             <button type="button" class="btn btn-primary btn-lg" data-tab-jump="calculator">
                                 <span>Calculate Project Cost</span>
                                 <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
@@ -192,44 +195,124 @@
                 </div>
             </section>
 
-            <!-- Interactive Quick Portal Cards: Explore by Category -->
+            <!-- Front Tab Visual Showcase Mosaic (Relevant Photo Gallery) -->
+            <section class="front-showcase-section">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-badge">Featured Transformations</div>
+                        <h2 class="section-title">Award-Winning Irish Garden Portfolio</h2>
+                        <p class="section-subtitle">
+                            Explore our latest residential landscape constructions across Dublin, Wicklow, and Cork. Click any project to toggle tabs and view full details.
+                        </p>
+                    </div>
+
+                    <div class="showcase-mosaic-grid">
+                        <!-- Mosaic 1 -->
+                        <div class="mosaic-card">
+                            <div class="mosaic-img-box">
+                                <img src="assets/after_garden.jpg" alt="Finished porcelain patio with green lawn" class="mosaic-img">
+                                <span class="mosaic-tag">Patio &amp; Lawn • Dublin South</span>
+                            </div>
+                            <div class="mosaic-body">
+                                <h3>Blackrock Luxury Living Terrace</h3>
+                                <p>60m² R11 Italian porcelain paving, flush thresholds, and integrated sub-soil French drains that eliminate puddling.</p>
+                                <button type="button" class="btn-toggle-action" data-tab-jump="gallery">
+                                    <span>Toggle to Before/After Slider 🖼️ →</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mosaic 2 -->
+                        <div class="mosaic-card">
+                            <div class="mosaic-img-box">
+                                <img src="assets/before_garden.jpg" alt="Before excavation and muddy backyard" class="mosaic-img">
+                                <span class="mosaic-tag">Site Transformation • Dublin</span>
+                            </div>
+                            <div class="mosaic-body">
+                                <h3>Heavy Clay Saturated Makeover</h3>
+                                <p>Before groundwork: waterlogged clay converted into laser-leveled aggregate base with SuDS environmental compliance.</p>
+                                <button type="button" class="btn-toggle-action" data-tab-jump="calculator">
+                                    <span>Toggle to Cost Calculator 💰 →</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mosaic 3 -->
+                        <div class="mosaic-card">
+                            <div class="mosaic-img-box">
+                                <img src="assets/hero_garden.jpg" alt="Evergreen garden and cedar pergola" class="mosaic-img">
+                                <span class="mosaic-tag">Cedar Living • Dublin North</span>
+                            </div>
+                            <div class="mosaic-body">
+                                <h3>Killiney Louvered Outdoor Lounge</h3>
+                                <p>Western Red Cedar pergola with motorized waterproof louvers, acoustic privacy screening, and ambient 12V LED lighting.</p>
+                                <button type="button" class="btn-toggle-action" data-tab-jump="manager">
+                                    <span>Toggle to Project Manager 📋 →</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Quick Portal Cards: Explore by Category (With Image Headers) -->
             <section class="portal-section">
                 <div class="container">
                     <div class="section-header text-center">
                         <div class="section-badge">Fast Navigation Portal</div>
                         <h2 class="section-title">What Would You Like To Explore Today?</h2>
                         <p class="section-subtitle">
-                            Switch directly to any section below without scrolling through pages.
+                            Toggle directly to any section below with one click.
                         </p>
                     </div>
 
                     <div class="portal-grid">
                         <div class="portal-card" data-tab-jump="services" role="button" tabindex="0" aria-label="Jump to Services &amp; Climate tab">
-                            <div class="portal-icon-circle">🛠️</div>
-                            <h3>Services &amp; Climate Tech</h3>
-                            <p>Anti-slip porcelain, sub-base drainage engineering, and cedar pergolas designed for 1,200mm annual Irish rain.</p>
-                            <span class="portal-link">Browse All 6 Services →</span>
+                            <div class="portal-card-img-wrapper">
+                                <img src="assets/after_garden.jpg" alt="Services and porcelain paving" class="portal-card-img">
+                                <span class="portal-card-badge">🛠️ 6 Services</span>
+                            </div>
+                            <div class="portal-card-body">
+                                <h3>Services &amp; Climate Tech</h3>
+                                <p>Anti-slip porcelain, sub-base drainage engineering, and cedar pergolas designed for 1,200mm annual Irish rain.</p>
+                                <span class="portal-link">Toggle to Services →</span>
+                            </div>
                         </div>
 
                         <div class="portal-card" data-tab-jump="gallery" role="button" tabindex="0" aria-label="Jump to Gallery &amp; Transformations tab">
-                            <div class="portal-icon-circle">🖼️</div>
-                            <h3>Transformations Gallery</h3>
-                            <p>Drag our interactive split slider to see real before-and-after results from Dublin, Cork, and Wicklow backyards.</p>
-                            <span class="portal-link">See Before &amp; After →</span>
+                            <div class="portal-card-img-wrapper">
+                                <img src="assets/before_garden.jpg" alt="Before and after transformation comparison" class="portal-card-img">
+                                <span class="portal-card-badge">🖼️ Live Slider</span>
+                            </div>
+                            <div class="portal-card-body">
+                                <h3>Transformations Gallery</h3>
+                                <p>Drag our interactive split slider to see real before-and-after results from Dublin, Cork, and Wicklow backyards.</p>
+                                <span class="portal-link">Toggle to Before &amp; After →</span>
+                            </div>
                         </div>
 
                         <div class="portal-card" data-tab-jump="calculator" role="button" tabindex="0" aria-label="Jump to Cost Estimator tab">
-                            <div class="portal-icon-circle">💰</div>
-                            <h3>Instant Cost Estimator</h3>
-                            <p>Configure your garden footprint (m²), select material scope, and get an immediate ballpark quotation in €.</p>
-                            <span class="portal-link">Calculate In Real-Time →</span>
+                            <div class="portal-card-img-wrapper">
+                                <img src="assets/hero_garden.jpg" alt="Garden cost estimation" class="portal-card-img">
+                                <span class="portal-card-badge">💰 Instant € Quote</span>
+                            </div>
+                            <div class="portal-card-body">
+                                <h3>Instant Cost Estimator</h3>
+                                <p>Configure your garden footprint (m²), select material scope, and get an immediate ballpark quotation in €.</p>
+                                <span class="portal-link">Toggle to Calculator →</span>
+                            </div>
                         </div>
 
                         <div class="portal-card" data-tab-jump="manager" role="button" tabindex="0" aria-label="Jump to Project Manager tab">
-                            <div class="portal-icon-circle">📋</div>
-                            <h3>Project &amp; Quote Manager</h3>
-                            <p>Add your own custom project packages, delete items, customize specifications, or manage saved design plans.</p>
-                            <span class="portal-link">Add &amp; Delete Projects →</span>
+                            <div class="portal-card-img-wrapper">
+                                <img src="assets/after_garden.jpg" alt="Manage custom garden projects" class="portal-card-img">
+                                <span class="portal-card-badge">📋 Add &amp; Delete</span>
+                            </div>
+                            <div class="portal-card-body">
+                                <h3>Project &amp; Quote Manager</h3>
+                                <p>Add your own custom project packages, delete items, customize specifications, or manage saved design plans.</p>
+                                <span class="portal-link">Toggle to Manager →</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1082,6 +1165,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Quick Tab Toggle Bar (Press & Toggle Navigation) -->
+    <aside class="quick-tab-toggle-bar" id="quickTabToggleBar" aria-label="Quick Tab Switcher">
+        <button type="button" class="btn-toggle-nav" id="prevTabBtn" title="Previous Tab" aria-label="Previous Tab">
+            ◀ Prev
+        </button>
+        <div class="toggle-pill-group">
+            <button type="button" class="toggle-pill active" data-tab-toggle="overview">🏡 Overview</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="services">🛠️ Services</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="gallery">🖼️ Gallery</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="calculator">💰 Estimator</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="manager">📋 Projects</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="reviews">⭐ Reviews</button>
+            <button type="button" class="toggle-pill" data-tab-toggle="contact">📅 Book</button>
+        </div>
+        <button type="button" class="btn-toggle-nav" id="nextTabBtn" title="Next Tab" aria-label="Next Tab">
+            Next ▶
+        </button>
+    </aside>
 
     <!-- Toast Notification Container -->
     <div class="toast-container" id="toastContainer" role="alert" aria-live="polite"></div>
